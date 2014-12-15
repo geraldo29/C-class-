@@ -1,0 +1,44 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h> 
+
+
+
+void main ()
+
+{
+	//promedio de diagonal 
+
+	int const filas = 4;
+	int const columnas = 4;
+	int index1, index2; float suma =0; float promedio = 0;
+
+	float arreglo[filas][columnas]; 
+	
+	for (index1=0;index1<filas;index1++)
+	for (index2=0;index2<columnas;index2++)
+	
+	{
+		
+		printf("Entre valores");
+		scanf("%f", &arreglo[index1][index2]);
+	
+	printf("arreglo[%d][%d] = %f", index1 + 1, index2 + 1, arreglo[index1][index2]);
+	printf("\n");
+
+
+		}
+
+	for (index1=0;index1<filas;index1++)
+		suma+= arreglo[index1][index1] + arreglo[index1][3-index1];
+
+
+	promedio+=suma/(8);
+	printf("promedio = %.2f", promedio);
+
+
+
+
+
+
+}

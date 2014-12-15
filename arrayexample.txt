@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+void main ()
+{
+	const int estudiantes = 15;
+	int index;
+	int answer; 
+
+	float arreglo[estudiantes];
+	 int frequency [11] = {0};
+	
+
+	for (index=0;index<40;index++)
+	{
+	printf("entre tu respuesta del 1-10");
+	scanf("%f", &arreglo[index]);
+	printf("arreglo[%d] = %f", index, arreglo[index]);
+	}
+/*
+	for (answer = 0;answer<11;answer++)
+		++frequency[ studentresponses [answer]];
+
+	printf("%s", answer); 
+	
+
+	*/
+
+
+}

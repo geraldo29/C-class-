@@ -1,0 +1,104 @@
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <math.h>
+#include <string.h>
+
+//files examples
+
+
+void main () {
+
+	FILE *myfile;
+	//how to use fgetc 
+	char ch; 
+	if((myfile = fopen("c:/geraldo/hola.txt","r"))==NULL) 
+		printf("my file couldnt be opened"); 
+	else 
+			fseek(myfile,20,20);
+			while (!feof(myfile)) {
+				 
+
+				ch = fgetc(myfile);
+				printf("%c", ch); 
+
+
+
+			}
+
+			fclose(myfile); 
+		
+
+	//how to use fputc
+
+	char arreglo [20]="HEELLLLOOOOOO"; 
+	int size, index1; 
+	size = strlen(arreglo); 
+
+	
+	if((myfile = fopen("c:/geraldo/hola.txt","w"))==NULL) 
+		printf("my file couldnt be opened"); 
+	else 
+		for (index1 = 0;index1<size; index1++)
+		{ 
+			printf(" writing the character %c\n", arreglo[index1]); 
+			fputc(arreglo[index1], myfile); 
+
+
+		}
+		
+		fclose(myfile); 
+		//how to use fgets 
+
+		char arreglo1[20]; 
+	if((myfile = fopen("c:/geraldo/hola.txt","r"))==NULL) 
+		printf("my file couldnt be opened"); 
+	else 
+			while (!feof(myfile)){
+				fgets(arreglo1,20,myfile);
+				printf("the array readed were %s\n" ,arreglo1); 
+
+			}
+			fclose(myfile); 
+			
+		//how to use fputs 
+
+			char arreglo2[20]; 
+			if((myfile = fopen("c:/geraldo/hola.txt","w"))==NULL) 
+		printf("my file couldnt be opened"); 
+				else 
+			{		printf("Enter a string");
+					gets(arreglo2); 
+					fputs(arreglo2, myfile);
+					printf("the arraaaay written was %s\n", arreglo2); 
+			}
+			fclose(myfile);
+
+			//how to use fscanf
+
+			char array[20];
+			char array1[20]; 
+
+
+
+			if((myfile = fopen("c:/geraldo/hola.txt","r"))==NULL) 
+		printf("my file couldnt be opened"); 
+				else 
+				{	fscanf(myfile,"%s %s", array, array1); 
+					printf("\n%s\t%s\n",array,array1); 
+						
+					fclose(myfile); 
+			}
+		//how to use fprintf
+		char array2[20]; 
+		int age; 
+		printf("\nenter your name and age"); 
+		gets(array2);
+		scanf("%d",&age); 
+		if((myfile = fopen("c:/geraldo/hola.txt","w"))==NULL) 
+			printf("my file couldnt be opened"); 
+				else 
+					fprintf(myfile," %s \t%d", array2,age);
+					fprintf(stdout,"%s \t%d", array2,age);
+					fclose(myfile); 
+
+}

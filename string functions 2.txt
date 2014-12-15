@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//string funcitions
+
+void main()
+
+{
+char str1[] = "Hola hermanos"; 
+char str2[] = "Hola brothers";
+printf("%d\n",strlen(str1));
+printf("%d\n",strlen(&str1[5]));
+
+printf("%d\n",strcmp(str1,str2));
+
+char *stringpnt = str2; 
+char letter = 'o';
+/*if (strchr(str1,letter) != NULL)
+{
+	printf("the letter %c was found in %p", letter,stringpnt);
+}
+else 
+	printf("letter %c isnt in %p", letter,stringpnt); */
+
+// const char *hello = "my name is the best because naaaaaaaancyhhhhhhhhhhh nanct told me";
+//char letter1 = 'n';
+
+//printf("the last occurrence of %c is %s", letter1, strrchr(hello, letter1));
+
+	/*double val;
+   char str[20] = "125478966";
+   printf("%s", str);
+   val = atol(str);
+   printf("string value =%s and float value =%f", str, val);
+   
+   strcpy(str, "98993489");
+   val = atol(str);
+   printf("String value = %s, Float value = %f\n", str, val);
+
+   strcpy(str, "tutorialspoint.com");
+   val = atof(str);
+   printf("String value = %s, Float value = %f\n", str, val);*/
+
+

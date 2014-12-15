@@ -1,0 +1,120 @@
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h> 
+#include <math.h> 
+//structures and functions
+struct gorras  { 
+	float medium; 
+	char name[20]; 
+	char color[15]; 
+	char gender;
+	float prize; 
+};
+
+ typedef struct gorras hat;
+ const int size = 10;
+ void leer(hat[],int); 
+ void imprimir(hat[],int); 
+
+ void main (){
+	 hat inventory [size]; 
+	 leer(inventory, size); 
+	 imprimir(inventory,size); 
+ }
+
+ void leer (hat nombre[], int tamano) {
+	 int index1; 
+	 for (index1=0;index1<tamano;index1++)
+	 {
+		 printf("Enter your size");
+		 scanf("%f",&nombre[index1].medium);
+		 printf("\nEnter your hat's color");
+		 scanf("%s",nombre[index1].color); 
+		 printf("\nEnter your hat's name");
+		 scanf("%s",nombre[index1].name);
+		 printf("\nEnter your hat's sex, male write m or female write f ");
+		 scanf("c", &nombre[index1].gender); 
+		 printf("\nEnter your hat's price");
+		 scanf("%f",&nombre[index1].prize);
+		 	 }
+
+ }
+
+ void imprimir (hat arreglo[], int size)
+ {
+	 int index1;
+	 do {
+	 printf("entre un elemento"); 
+	 scanf("%d",&index1); 
+	 }
+	 while (index1>= size || index1 <0);
+	 {
+	 printf("name is ");
+	 printf("%s", arreglo[index1].name);
+ }
+	 
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*
+ 
+ 
+ 
+ void imprimir (hat);
+
+
+float funcion1(float);
+ void funcion2(char[],int);
+void main (){
+	float tamano;
+	hat nike; 
+	nike.size=10; 
+	strcpy(nike.name,"La dura");
+	strcpy(nike.color,"rojo"); 
+	nike.gender = 'M'; 
+	nike.prize=65.99; 
+	imprimir (nike);
+	tamano = funcion1(nike.size);
+	printf("after returning from function 1, %f is now the size\n",tamano);
+	printf("before going to 2, %s is the original nike name \n",nike.name);
+	funcion2(nike.name,20); 
+	
+}
+void imprimir (hat niky){
+
+	printf("%.2f\n", niky.prize);
+	
+}
+
+float funcion1 (float size){
+	int resultado; 
+	resultado = size + 2;
+	return resultado;
+}
+
+void funcion2(char nombre[], int size) {
+	char arreglo[20]= "hello";
+	
+	strcpy(nombre ,arreglo);
+	printf("in 2, %s is the new name for the nike \n",nombre);
+	 
+}
+
+*/

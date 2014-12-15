@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main ()
+{
+   FILE *fp;
+   char letra[] = "hola como estas";
+
+   fp = fopen("c:/geraldo/hola.text", "w");
+   fprintf(fp, "%s", letra);
+   
+   
+   fclose(fp);
+
+   return(0);
+}

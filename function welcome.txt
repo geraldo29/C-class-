@@ -1,0 +1,12 @@
+#include <stdio.h>
+void bienvenido();
+
+void main() 
+{
+	bienvenido();
+}
+
+void bienvenido()
+{
+	printf("bienvenido al programa");
+}

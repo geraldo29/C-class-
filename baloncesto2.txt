@@ -1,0 +1,33 @@
+#include <stdio.h> 
+#include <math.h>
+
+
+//tiro de equipo
+
+void main ()
+{
+
+	int tirostirados[12];
+	int tirosanotados[12];
+	int index1, index2, sumaanotados = 0, sumatirados = 0, promediojugador = 0,promedioequipo;
+
+
+	for (index1=0;index1<12;index1++)
+	{
+		printf("Tiros Intentados");
+		scanf("%d", &tirostirados[index1]);
+		printf("Tiros Tirados = %d\n",tirostirados[index1]);
+
+		sumatirados = sumatirados + tirostirados[index1];
+
+		printf("Tiros anotados");
+		scanf("%d", &tirosanotados[index1]);
+		printf("Tiros Anotados =%d\n", tirosanotados[index1]);
+
+		sumaanotados = sumaanotados + tirosanotados[index1];
+
+		promediojugador = (tirosanotados[index1] / tirostirados[index1]) * 100;
+		printf("promedio individual");
+		printf("%.2f\n", float(promediojugador));
+
+	}

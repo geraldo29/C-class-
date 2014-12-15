@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+
+//string functions
+
+void main () 
+{
+	int size;
+	char arreglo[20]="Jose";
+	char arreglo1[15]="Jose";
+	/*printf("Entre nombre");
+	gets(arreglo); */
+	/*printf("%s\n", arreglo);
+	size = strlen(arreglo); 
+	printf("%d\n",size);
+
+	//strcpy(arreglo,arreglo1);
+	//printf("%s\n", arreglo);*/
+
+	//strcat(arreglo,arreglo1);
+	//printf("%s\n", arreglo);
+
+	printf("%s%d","",strcmp( arreglo, arreglo1));
+	
+
+}

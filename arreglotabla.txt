@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+	int main( void )
+ {
+ int answer; 
+ int rating; 
+ int frequency[ 11 ] = { 0 };
+
+ int responses[ 40] = { 1, 1, 6, 4, 8, 5, 9, 7, 8, 10,
+ 1, 6, 3, 8, 6, 10, 3, 8, 2, 7, 6, 5, 7, 6, 8, 6, 7, 5, 6, 6,
+ 5, 6, 7, 5, 6, 4, 8, 6, 8, 10 };
+
+ for ( answer = 0; answer < 40; ++answer ) 
+ {
+	 ++frequency[responses[ answer ]];
+ } 
+
+ 
+printf( "%s%20s\n", "Rating", "Frequency" );
+
+ // tabla
+ for ( rating = 1; rating < 11; ++rating ) {
+ printf( "%6d%17d\n", rating, frequency[ rating ] );
+} // end for
+ }
+
+

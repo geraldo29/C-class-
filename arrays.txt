@@ -1,0 +1,22 @@
+#include <stdio.h> 
+#include <math.h>
+
+//arrays
+
+void main ()
+{
+
+	int tirostirados[12];
+	int tirosanotados[12];
+	int index1, index2;
+
+
+	for (index1=0;index1<12;index1++)
+	{
+		printf("Tiros Intentados");
+		scanf("%d", &tirostirados[index1]);
+
+	}
+	
+
+	}

@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+
+//find a character
+
+void main ()
+
+{
+char str1[] = "Lo que quieras enverdad porque tu no sirves que mujeres como tu hoy en dias no sirven santo";
+int index1= 0;
+char str2[] = "cola";
+char *prt;
+prt = str1;
+do {
+	prt = strstr(prt,str2);
+if (prt != '\0')
+{	 index1++;
+	prt++;
+	
+}
+}
+while (prt !='\0'); 
+
+printf("%d is how many times we found the 'the' in %p", index1,prt);
+}

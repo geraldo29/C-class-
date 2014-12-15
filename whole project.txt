@@ -1,0 +1,74 @@
+#include <stdio.h> 
+#include <math.h>
+#include <stdlib.h>
+
+//geraldo lopez
+//proyecto completo
+
+
+void main ()
+{
+
+	int tirostirados[12];
+	int tirosanotados[12];
+	int promedioindividual[12];
+	int index1, index2, sumaanotados = 0, sumatirados = 0;
+	float promediojugador,promedioequipo = 0;
+	float desviacionestandar = 0, numerador = 0;
+
+
+	printf("\t\t\tLos3Men2 Temporada 2013\n");
+	printf("\t\tEfectividad de tiros de los 12 jugadores\n");
+
+
+
+	for (index1=0;index1<12;index1++)
+	{
+		printf("Tiros Tirados por Jugador#%d=", index1 +1);
+		scanf("%d", &tirostirados[index1]);
+		printf("Tiros Tirados Tirados por Jugador#%d = %d\n",index1+1,tirostirados[index1]);
+
+		sumatirados = sumatirados + tirostirados[index1];
+
+		
+		printf("Tiros Anotados por Jugador#%d=", index1 + 1);
+		scanf("%d", &tirosanotados[index1]);
+		if (tirosanotados[index1] >tirostirados[index1])
+			{printf("ERROR. No puedes meter mas de lo que tiraste");
+		 exit(0);}
+		else 	
+			printf("Tiros Tirados Anotados por Jugador#%d = %d\n",index1+1,tirosanotados[index1]);
+
+		sumaanotados = sumaanotados + tirosanotados[index1];
+
+		promediojugador = ((float)tirosanotados[index1] / tirostirados[index1]) * 100;
+		promedioindividual[index1] = promediojugador;
+		printf("Promedio Individual del Jugador#%d = %.2f\n\n",index1 + 1, promediojugador);
+		
+	}
+
+	promedioequipo =  ((float)sumaanotados/sumatirados) * 100;
+	printf("Promedio del equipo es %.2f\n\n", promedioequipo);
+
+	//promedio individual mejor que promedio del equipo imprima ese jugador.
+	printf("Estos jugadores estaban sobre el promedio del equipo durante la temporada 2013\n");
+	for (index1=0;index1<12;index1++)
+	if (promedioindividual[index1] > (float)promedioequipo)
+		printf("Jugador#%d promedio %.2d\n\n", index1 + 1, promedioindividual[index1]);
+		
+	else 
+		printf("");
+
+
+			
+			for (index1=0;index1<12;index1++)
+			{ 
+				numerador = numerador + pow((promedioindividual[index1] -promedioequipo),2);
+			}
+				
+			desviacionestandar = sqrt(numerador/12);
+			printf("Desviacion Estandar del equipo es %.2f\n", desviacionestandar);
+
+				
+				
+}

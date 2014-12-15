@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <math.h>
+/* Programa para intercambiar columnas de un arreglo de 2 dimensiones
+*/
+void main()  
+{
+const int filas=5,columnas=6;
+int numeros[filas][columnas];
+int temp;
+int index1,index2;
+for(index1=0;index1<filas;index1++)
+{
+    for(index2=0;index2<columnas;index2+=2)
+    numeros[index1][index2]=5;
+    for(index2=1;index2<columnas;index2+=2)
+    numeros[index1][index2]=3;
+}
+//imprimir
+printf("\nPrograma para intercambiar columnas de un arreglo de 2 dimensiones\n");
+printf("\nArreglo Original:\n\n");
+for(index1=0;index1<filas;index1++)
+{
+    for(index2=0;index2<columnas;index2++)
+    printf("%5d",numeros[index1][index2]);
+    printf("\n");
+}
+//intercambiar
+for(index1=0;index1<filas;index1++)
+    for(index2=0;index2<columnas;index2+=2)
+    {
+    temp=numeros[index1][index2];
+    numeros[index1][index2]=numeros[index1][index2+1];
+    numeros[index1][index2+1]=temp;
+    }
+//imprimir luego de intercambiar columnas
+printf("\n\nArreglo con columnas intercambiadas:\n\n");
+for(index1=0;index1<filas;index1++)
+{
+    for(index2=0;index2<columnas;index2++)
+    printf("%5d",numeros[index1][index2]);
+    printf("\n");
+}
+printf("\n\n");
+}

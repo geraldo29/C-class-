@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+
+void main ()
+
+{
+	double ano = 1;
+	double costo = 28000;
+	double depreciacion = 0;
+	double total, interes;
+	
+	printf("\n Programa para ver la depreciacion de un carro despues de 7 anos");
+	
+	for (ano = 1; ano <= 7; ++ano)
+	{
+		depreciacion = depreciacion + 4000;
+		costo = costo - depreciacion; 
+
+		printf("\n Depreciacion es: %lf", depreciacion);
+		printf("\n Ano es: %lf" , ano);
+		printf("\n Total de carro es: %.2lf", costo); 
+	
+		}
+
+		printf("\n Terminanos:)"); 
+
+
+		
+}

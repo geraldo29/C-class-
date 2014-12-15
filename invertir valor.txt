@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int inverso (int);
+
+
+//invertir valor
+void main () 
+{
+	int valor, resultado; 
+	do { printf("Entre numero que quiera invertir"); 
+	scanf("%d", &valor); 
+		}
+	while (valor <=10);
+	printf("El numero invertido es:");
+	resultado = inverso(valor);
+	printf("%d", resultado);
+
+}
+	int inverso(int valor1)
+	{
+		while (valor1 !=0)
+		{printf("%d", valor1 % 10);
+		valor1 = valor1/10;
+		}
+		printf("\n\n");
+		return valor1;
+
+
+	}

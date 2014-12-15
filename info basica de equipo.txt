@@ -1,0 +1,19 @@
+#include <stdio.h> 
+
+//author: geraldo lopez
+
+/* este programa es para mostrar la información básica de un equipo de baloncesto*/
+
+void main()
+
+{
+	printf("Informacion basica de los 3Men2\n\n");
+	printf("Nombre del equipo: 3Men2\n\n");
+	printf("Pueblo que Representan: Bayamon\n\n");
+	printf("Apoderado del Equipo: Geraldo Lopez Rosa\n\n");
+	printf("Nombre de el Coliseo donde juegan: Juan Ramon Loubriel Stadium\n\n");
+	printf("Direccion fisica: Carr. #2 interseccion Carr. #5, Bayamon, Puerto Rico\n\n");
+	printf("Total de Personas que asistieron a sus Juegos Locales: 22,000\n\n");
+
+
+	}

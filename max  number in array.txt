@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+ void main ()
+
+{
+	//2 valores maximo de un array 
+const int filas = 4;
+const int columnas = 4;
+int index1, index2; 
+int max1,max2, nada;
+
+int arreglo[filas][columnas];
+
+for(index1=0;index1<filas;index1++)
+for(index2=0;index2<columnas;index2++)
+{ 
+	printf("entre valor");
+	scanf("%d", &arreglo[index1][index2]);
+}
+
+	max1 = arreglo[0][0];
+	max2=arreglo[0][1];
+	if (max1<max2)
+
+		{
+		nada = max1;
+		max1 = max2;
+		max2 = nada;
+	} 
+
+	
+	for(index1=0;index1<filas;index1++)
+	for(index2=0;index2<columnas;index2++)
+	{
+		if (max1 < arreglo[index1][index2])
+		{
+			max2=max1; 
+			max1=arreglo[index1][index2];
+		}
+		else
+		if (arreglo[index1][index2]>max2)
+		max2 = arreglo[index1][index2];
+	
+	}
+	
+
+	printf("Max 1= %d y Max 2=%d", max1,max2);
+
+	
+
+
+}
